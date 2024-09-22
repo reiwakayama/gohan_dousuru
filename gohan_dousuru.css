@@ -38,3 +38,7 @@
             background-color: #e6ffe6;
             font-weight: 600;
         }
+        select {
+            width: 300px; 
+            max-width: 100%; 
+        }
