@@ -26,12 +26,21 @@
             <img src="image/人参.png" alt="人参">
             <div>人参</div>
         </div>
+        <div class="tile" data-value="セロリ">
+            <img src="image/セロリ.png" alt="セロリ">
+            <div>セロリ</div>
+        </div>
+        <div class="tile" data-value="レタス">
+            <img src="image/レタス.png" alt="レタス">
+            <div>レタス</div>
+        </div>
     </div>
     <input type="hidden" name="selected_items" id="selected_items">
 　　<br><br>
     <label for="main">メイン料理</label>
     <br>
     <select name="main" id="main">
+          <option value="おまかせ">おまかせ</option>  
           <option value="ピーマン肉詰め">ピーマン肉詰め</option>
           <option value="ロールキャベツ">ロールキャベツ</option>
           <option value="ひじき入り肉じゃが">ひじき入り肉じゃが</option>
@@ -53,12 +62,12 @@
         　<option value="唐揚げ">唐揚げ</option>
         　<option value="焼うどん">焼うどん</option>
         　<option value="焼きそば">焼きそば</option>
-          <option value="おまかせ">おまかせ</option>
     </select>
     <br><br>
     <label for="side">副菜</label>
     <br>
     <select name="side" id="side">
+        　<option value="おまかせ">おまかせ</option>
           <option value="きんぴらごぼう">きんぴらごぼう</option>
           <option value="たたききゅうり">たたききゅうり</option>
         　<option value="かぼちゃの煮物">かぼちゃの煮物</option>
@@ -69,17 +78,16 @@
         　<option value="牛皿">牛皿</option>
         　<option value="茄子のお浸し">茄子のお浸し</option>
         　<option value="肉豆腐">肉豆腐</option>
-          <option value="おまかせ">おまかせ</option>
     </select>
     <br><br>
-    <label for="side">汁物</label>
+    <label for="soup">汁物</label>
     <br>
-    <select name="side" id="side">
+    <select name="soup" id="soup">
+        　<option value="おまかせ">おまかせ</option>  
           <option value="味噌汁">味噌汁</option>
           <option value="ミネストローネ">ミネストローネ</option>
           <option value="豚汁">豚汁</option>
         　<option value="ほうれん草たっぷり豆乳スープ">ほうれん草たっぷり豆乳スープ</option>
-          <option value="おまかせ">おまかせ</option>
     </select>
     <br><br>
     <button type="submit" class="submit-button">送信</button>
