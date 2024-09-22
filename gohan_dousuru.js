@@ -32,10 +32,6 @@ const options = {
     },
 };
 
-const initialMainOptions = Array.from(mainSelect.options);
-const initialSideOptions = Array.from(sideSelect.options);
-const initialSoupOptions = Array.from(soupSelect.options);
-
 tiles.forEach(tile => {
     tile.addEventListener('click', () => {
         tile.classList.toggle('selected');
@@ -47,43 +43,29 @@ function updateSelectedItems() {
     const selectedValues = Array.from(tiles)
         .filter(tile => tile.classList.contains('selected'))
         .map(tile => tile.getAttribute('data-value'));
-    
+
     selectedItemsInput.value = selectedValues.join(',');
     highlightOptions(selectedValues);
 }
 
 function highlightOptions(selectedValues) {
-    mainSelect.innerHTML = '';
-    sideSelect.innerHTML = '';
-    soupSelect.innerHTML = '';
-
-    initialMainOptions.forEach(option => {
-        const isHighlighted = selectedValues.includes(option.value);
-        const newOption = createOption(option.value, isHighlighted);
-        mainSelect.appendChild(newOption);
-    });
-
-    initialSideOptions.forEach(option => {
-        const isHighlighted = selectedValues.includes(option.value);
-        const newOption = createOption(option.value, isHighlighted);
-        sideSelect.appendChild(newOption);
-    });
-
-    initialSoupOptions.forEach(option => {
-        const isHighlighted = selectedValues.includes(option.value);
-        const newOption = createOption(option.value, isHighlighted);
-        soupSelect.appendChild(newOption);
-    });
+    highlightSelectOptions(mainSelect, selectedValues, 'main');
+    highlightSelectOptions(sideSelect, selectedValues, 'side');
+    highlightSelectOptions(soupSelect, selectedValues, 'soup');
 }
 
-function createOption(optionText, highlight) {
-    const option = document.createElement('option');
-    option.value = optionText;
-    option.textContent = optionText;
-    if (highlight) {
-        option.style.backgroundColor = '#e6ffe6'; // Highlight with light green background
-    }
-    return option;
+function highlightSelectOptions(selectElement, selectedValues, category) {
+    Array.from(selectElement.options).forEach(option => {
+        let shouldHighlight = false;
+        
+        selectedValues.forEach(selectedValue => {
+            if (options[category][selectedValue]?.includes(option.value)) {
+                shouldHighlight = true;
+            }
+        });
+
+        option.style.backgroundColor = shouldHighlight ? '#e6ffe6' : '';
+    });
 }
 
 function setDefaultDate() {
