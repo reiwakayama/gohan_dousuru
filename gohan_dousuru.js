@@ -53,19 +53,23 @@ function highlightOptions(selectedValues) {
     sideSelect.innerHTML = '';
     soupSelect.innerHTML = '';
 
-    function addAllOptions(select, category) {
-        Object.keys(options[category]).forEach(key => {
-            const categoryOptions = options[category][key];
-            categoryOptions.forEach(option => {
-                const optionElement = createOption(option, selectedValues.includes(key));
-                select.appendChild(optionElement);
-            });
-        });
-    }
+    Array.from(mainSelect.options).forEach(option => {
+        const isHighlighted = selectedValues.includes(option.value);
+        const newOption = createOption(option.value, isHighlighted);
+        mainSelect.appendChild(newOption);
+    });
 
-    addAllOptions(mainSelect, 'main');
-    addAllOptions(sideSelect, 'side');
-    addAllOptions(soupSelect, 'soup');
+    Array.from(sideSelect.options).forEach(option => {
+        const isHighlighted = selectedValues.includes(option.value);
+        const newOption = createOption(option.value, isHighlighted);
+        sideSelect.appendChild(newOption);
+    });
+
+    Array.from(soupSelect.options).forEach(option => {
+        const isHighlighted = selectedValues.includes(option.value);
+        const newOption = createOption(option.value, isHighlighted);
+        soupSelect.appendChild(newOption);
+    });
 }
 
 function createOption(optionText, highlight) {
