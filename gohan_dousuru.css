@@ -34,3 +34,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .highlight {
+            background-color: #e7f3ff;
+            font-weight: bold;
+        }
