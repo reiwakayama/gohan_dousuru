@@ -7,28 +7,28 @@ const dateInput = document.getElementById('date');
 
 const options = {
     main: {
-    "ピーマン": ["ピーマン肉詰め", "ガパオライス", "ファヒータ"],
-    "キャベツ": ["ロールキャベツ", "焼うどん", "焼きそば"],
-    "玉ねぎ": ["親子丼"],
-    "人参": ["カレーライス", "焼うどん", "焼きそば"],
-    "セロリ": ["フェジョアーダ"],
-    "レタス": ["タコス"],
+        "ピーマン": ["ピーマン肉詰め", "ガパオライス", "ファヒータ"],
+        "キャベツ": ["ロールキャベツ", "焼うどん", "焼きそば"],
+        "玉ねぎ": ["親子丼"],
+        "人参": ["カレーライス", "焼うどん", "焼きそば"],
+        "セロリ": ["フェジョアーダ"],
+        "レタス": ["タコス"],
     },
     side: {
-    "ピーマン": [],
-    "キャベツ": [],
-    "玉ねぎ": ["玉ねぎ焼き", "牛皿", "肉豆腐"],
-    "人参": ["きんぴらごぼう"],
-    "セロリ": [],
-    "レタス": ["レタスと韓国のりのサラダ"],
+        "ピーマン": [],
+        "キャベツ": [],
+        "玉ねぎ": ["玉ねぎ焼き", "牛皿", "肉豆腐"],
+        "人参": ["きんぴらごぼう"],
+        "セロリ": [],
+        "レタス": ["レタスと韓国のりのサラダ"],
     },
     soup: {
-    "ピーマン": [],
-    "キャベツ": [],
-    "玉ねぎ": [],
-    "人参": [],
-    "セロリ": ["ミネストローネ"],
-    "レタス": [],
+        "ピーマン": [],
+        "キャベツ": [],
+        "玉ねぎ": [],
+        "人参": [],
+        "セロリ": ["ミネストローネ"],
+        "レタス": [],
     },
 };
 
@@ -53,17 +53,19 @@ function highlightOptions(selectedValues) {
     sideSelect.innerHTML = '';
     soupSelect.innerHTML = '';
 
-    Object.entries(options).forEach(([key, value]) => {
-        value.forEach(option => {
-            const mainOption = createOption(option, selectedValues.includes(key));
-            const sideOption = createOption(option, selectedValues.includes(key));
-            const soupOption = createOption(option, selectedValues.includes(key));
-
-            mainSelect.appendChild(mainOption);
-            sideSelect.appendChild(sideOption);
-            soupSelect.appendChild(soupOption);
+    function addAllOptions(select, category) {
+        Object.keys(options[category]).forEach(key => {
+            const categoryOptions = options[category][key];
+            categoryOptions.forEach(option => {
+                const optionElement = createOption(option, selectedValues.includes(key));
+                select.appendChild(optionElement);
+            });
         });
-    });
+    }
+
+    addAllOptions(mainSelect, 'main');
+    addAllOptions(sideSelect, 'side');
+    addAllOptions(soupSelect, 'soup');
 }
 
 function createOption(optionText, highlight) {
