@@ -49,23 +49,27 @@ function updateSelectedItems() {
 }
 
 function highlightOptions(selectedValues) {
+    const allMainOptions = Array.from(mainSelect.options);
+    const allSideOptions = Array.from(sideSelect.options);
+    const allSoupOptions = Array.from(soupSelect.options);
+
     mainSelect.innerHTML = '';
     sideSelect.innerHTML = '';
     soupSelect.innerHTML = '';
 
-    Array.from(mainSelect.options).forEach(option => {
+    allMainOptions.forEach(option => {
         const isHighlighted = selectedValues.includes(option.value);
         const newOption = createOption(option.value, isHighlighted);
         mainSelect.appendChild(newOption);
     });
 
-    Array.from(sideSelect.options).forEach(option => {
+    allSideOptions.forEach(option => {
         const isHighlighted = selectedValues.includes(option.value);
         const newOption = createOption(option.value, isHighlighted);
         sideSelect.appendChild(newOption);
     });
 
-    Array.from(soupSelect.options).forEach(option => {
+    allSoupOptions.forEach(option => {
         const isHighlighted = selectedValues.includes(option.value);
         const newOption = createOption(option.value, isHighlighted);
         soupSelect.appendChild(newOption);
