@@ -81,7 +81,7 @@ function createOption(optionText, highlight) {
     option.value = optionText;
     option.textContent = optionText;
     if (highlight) {
-        option.classList.add('highlight');
+        option.style.backgroundColor = '#e6ffe6'; // Set the background color for highlighting
     }
     return option;
 }
