@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gohan_dousuru.css">
+    <title>gohan_dousuru</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍋</text></svg>">
+</head>
+<body>
+<form action="/example.html" method="POST">
+    <label for="date">日付</label>
+    <input type="date" id="date" name="date">
+    <br><br>
+    <label for="ingredient">食材から献立を選ぶ</label>
+    <div class="tile-container">
+        <div class="tile" data-value="ピーマン">
+            <img src="image/ピーマン.png" alt="ピーマン">
+            <div>ピーマン</div>
+        </div>
+        <div class="tile" data-value="キャベツ">
+            <img src="image/キャベツ.png" alt="キャベツ">
+            <div>キャベツ</div>
+        </div>
+        <div class="tile" data-value="玉ねぎ">
+            <img src="image/玉ねぎ.png" alt="玉ねぎ">
+            <div>玉ねぎ</div>
+        </div>
+        <div class="tile" data-value="人参">
+            <img src="image/人参.png" alt="人参">
+            <div>人参</div>
+        </div>
+        <div class="tile" data-value="セロリ">
+            <img src="image/セロリ.png" alt="セロリ">
+            <div>セロリ</div>
+        </div>
+        <div class="tile" data-value="レタス">
+            <img src="image/レタス.png" alt="レタス">
+            <div>レタス</div>
+        </div>
+    </div>
+    <input type="hidden" name="selected_items" id="selected_items">
+　　<br><br>
+    <label for="main">メイン料理</label>
+    <br>
+    <select name="main" id="main">
+          <option value="おまかせ">おまかせ</option>  
+    </select>
+    <br><br>
+    <label for="side">副菜</label>
+    <br>
+    <select name="side" id="side">
+        　<option value="おまかせ">おまかせ</option>
+    </select>
+    <br><br>
+    <label for="soup">汁物</label>
+    <br>
+    <select name="soup" id="soup">
+        　<option value="おまかせ">おまかせ</option>  
+    </select>
+    <br><br>
+    <button type="submit" class="submit-button">送信</button>
+</form>
+<script src="gohan_dousuru.js"></script>
+</body>
+</html>
