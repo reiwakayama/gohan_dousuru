@@ -62,11 +62,17 @@ function highlightOptions(selectedValues) {
 
 function highlightSelectOptions(selectElement, itemsToHighlight) {
     if (!itemsToHighlight) return;
-    
+
     Array.from(selectElement.options).forEach(option => {
         if (itemsToHighlight.includes(option.value)) {
-            option.style.backgroundColor = '#e6ffe6'; 
+            option.classList.add('highlight'); // Add highlight class
         }
+    });
+}
+
+function resetHighlighting(selectElement) {
+    Array.from(selectElement.options).forEach(option => {
+        option.classList.remove('highlight'); // Remove highlight class
     });
 }
 
