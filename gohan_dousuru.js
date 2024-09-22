@@ -65,14 +65,8 @@ function highlightSelectOptions(selectElement, itemsToHighlight) {
     
     Array.from(selectElement.options).forEach(option => {
         if (itemsToHighlight.includes(option.value)) {
-            option.style.backgroundColor = '#e6ffe6'; // Highlight
+            option.style.backgroundColor = '#e6ffe6'; 
         }
-    });
-}
-
-function resetHighlighting(selectElement) {
-    Array.from(selectElement.options).forEach(option => {
-        option.style.backgroundColor = ''; // Reset background color
     });
 }
 
