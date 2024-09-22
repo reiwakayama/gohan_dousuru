@@ -49,22 +49,30 @@ function updateSelectedItems() {
 }
 
 function highlightOptions(selectedValues) {
-    highlightSelectOptions(mainSelect, selectedValues, 'main');
-    highlightSelectOptions(sideSelect, selectedValues, 'side');
-    highlightSelectOptions(soupSelect, selectedValues, 'soup');
+    resetHighlighting(mainSelect);
+    resetHighlighting(sideSelect);
+    resetHighlighting(soupSelect);
+
+    selectedValues.forEach(value => {
+        highlightSelectOptions(mainSelect, options.main[value]);
+        highlightSelectOptions(sideSelect, options.side[value]);
+        highlightSelectOptions(soupSelect, options.soup[value]);
+    });
 }
 
-function highlightSelectOptions(selectElement, selectedValues, category) {
+function highlightSelectOptions(selectElement, itemsToHighlight) {
+    if (!itemsToHighlight) return;
+    
     Array.from(selectElement.options).forEach(option => {
-        let shouldHighlight = false;
-        
-        selectedValues.forEach(selectedValue => {
-            if (options[category][selectedValue]?.includes(option.value)) {
-                shouldHighlight = true;
-            }
-        });
+        if (itemsToHighlight.includes(option.value)) {
+            option.style.backgroundColor = '#e6ffe6'; // Highlight
+        }
+    });
+}
 
-        option.style.backgroundColor = shouldHighlight ? '#e6ffe6' : '';
+function resetHighlighting(selectElement) {
+    Array.from(selectElement.options).forEach(option => {
+        option.style.backgroundColor = ''; // Reset background color
     });
 }
 
