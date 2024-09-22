@@ -35,8 +35,8 @@
             cursor: pointer;
         }
         .highlight {
-            background-color: #e7f3ff;
-            font-weight: bold;
+            background-color: #e6ffe6;
+            font-weight: semi-bold;
         }
         select {
             width: 300px;
