@@ -49,10 +49,7 @@ function updateSelectedItems() {
 }
 
 function highlightOptions(selectedValues) {
-    resetHighlighting(mainSelect);
-    resetHighlighting(sideSelect);
-    resetHighlighting(soupSelect);
-
+    // Highlight only the relevant options
     selectedValues.forEach(value => {
         highlightSelectOptions(mainSelect, options.main[value]);
         highlightSelectOptions(sideSelect, options.side[value]);
@@ -61,18 +58,10 @@ function highlightOptions(selectedValues) {
 }
 
 function highlightSelectOptions(selectElement, itemsToHighlight) {
-    if (!itemsToHighlight) return;
-
     Array.from(selectElement.options).forEach(option => {
-        if (itemsToHighlight.includes(option.value)) {
-            option.classList.add('highlight'); // Add highlight class
+        if (itemsToHighlight && itemsToHighlight.includes(option.value)) {
+            option.style.backgroundColor = '#e6ffe6'; // Highlight
         }
-    });
-}
-
-function resetHighlighting(selectElement) {
-    Array.from(selectElement.options).forEach(option => {
-        option.classList.remove('highlight'); // Remove highlight class
     });
 }
 
