@@ -1,8 +1,8 @@
 const tiles = document.querySelectorAll('.tile');
 const selectedItemsInput = document.getElementById('selected_items');
 const mainSelect = document.getElementById('main');
-const sideSelect = document.getElementById('side'); 
-const soupSelect = document.getElementById('soup'); 
+const sideSelect = document.getElementById('side');
+const soupSelect = document.getElementById('soup');
 const dateInput = document.getElementById('date');
 
 const options = {
@@ -32,6 +32,10 @@ const options = {
     },
 };
 
+const initialMainOptions = Array.from(mainSelect.options);
+const initialSideOptions = Array.from(sideSelect.options);
+const initialSoupOptions = Array.from(soupSelect.options);
+
 tiles.forEach(tile => {
     tile.addEventListener('click', () => {
         tile.classList.toggle('selected');
@@ -49,27 +53,23 @@ function updateSelectedItems() {
 }
 
 function highlightOptions(selectedValues) {
-    const allMainOptions = Array.from(mainSelect.options);
-    const allSideOptions = Array.from(sideSelect.options);
-    const allSoupOptions = Array.from(soupSelect.options);
-
     mainSelect.innerHTML = '';
     sideSelect.innerHTML = '';
     soupSelect.innerHTML = '';
 
-    allMainOptions.forEach(option => {
+    initialMainOptions.forEach(option => {
         const isHighlighted = selectedValues.includes(option.value);
         const newOption = createOption(option.value, isHighlighted);
         mainSelect.appendChild(newOption);
     });
 
-    allSideOptions.forEach(option => {
+    initialSideOptions.forEach(option => {
         const isHighlighted = selectedValues.includes(option.value);
         const newOption = createOption(option.value, isHighlighted);
         sideSelect.appendChild(newOption);
     });
 
-    allSoupOptions.forEach(option => {
+    initialSoupOptions.forEach(option => {
         const isHighlighted = selectedValues.includes(option.value);
         const newOption = createOption(option.value, isHighlighted);
         soupSelect.appendChild(newOption);
@@ -81,7 +81,7 @@ function createOption(optionText, highlight) {
     option.value = optionText;
     option.textContent = optionText;
     if (highlight) {
-        option.style.backgroundColor = '#e6ffe6';
+        option.style.backgroundColor = '#e6ffe6'; // Highlight with light green background
     }
     return option;
 }
