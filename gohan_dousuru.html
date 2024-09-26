@@ -9,9 +9,6 @@
 </head>
 <body>
 <form method="POST" action="https://script.google.com/macros/s/AKfycbxDlxRGjk6iyrZlcHEzV-WfJH8MylQWPCr25-gOQ_YTf5wVePqzIL0GUCvPQazgZFWG/exec">
-    <label for="date">日付</label>
-    <input type="date" id="date" name="date">
-    <br><br>
     <label for="ingredient">食材から献立を選ぶ</label>
     <div class="tile-container">
         <div class="tile" data-value="ピーマン">
@@ -41,9 +38,71 @@
     </div>
     <input type="hidden" name="selected_items" id="selected_items">
 　　<br><br>
-    <label for="main">メイン料理</label>
+    <label for="date1">日付①</label>
     <br>
-    <select name="main" id="main">
+    <input type="date" id="date1" name="date1">
+    <br><br>
+    <label for="main1">メイン料理</label>
+    <br>
+    <select name="main1" id="main1">
+          <option value="おまかせ">おまかせ</option>  
+          <option value="ピーマン肉詰め">ピーマン肉詰め</option>
+          <option value="ロールキャベツ">ロールキャベツ</option>
+          <option value="ひじき入り肉じゃが">ひじき入り肉じゃが</option>
+          <option value="ハンバーグ">ハンバーグ</option>
+       　 <option value="麻婆茄子">麻婆茄子</option>
+          <option value="豚キムチ炒飯">豚キムチ炒飯</option>
+       　 <option value="親子丼">親子丼</option>
+        　<option value="生姜焼き">生姜焼き</option>
+        　<option value="ハヤシライス">ハヤシライス</option>
+        　<option value="カレーライス">カレーライス</option>
+        　<option value="キーマカレー">キーマカレー</option>
+        　<option value="ビーフシチュー">ビーフシチュー</option>
+        　<option value="タコス">タコス</option>
+        　<option value="ファヒータ">ファヒータ</option>
+        　<option value="ガパオライス">ガパオライス</option>
+        　<option value="カオマンガイ">カオマンガイ</option>
+        　<option value="フェジョアーダ">フェジョアーダ</option>
+       　 <option value="春巻き">春巻き</option>
+        　<option value="唐揚げ">唐揚げ</option>
+        　<option value="焼うどん">焼うどん</option>
+        　<option value="焼きそば">焼きそば</option>
+    </select>
+    <br><br>
+    <label for="side1">副菜</label>
+    <br>
+    <select name="side1" id="side1">
+        　<option value="おまかせ">おまかせ</option>
+          <option value="きんぴらごぼう">きんぴらごぼう</option>
+          <option value="たたききゅうり">たたききゅうり</option>
+        　<option value="レタスと韓国のりのサラダ">レタスと韓国のりのサラダ</option>
+        　<option value="かぼちゃの煮物">かぼちゃの煮物</option>
+          <option value="ガーリックシュリンプ">ガーリックシュリンプ</option>
+       　 <option value="アスパラの豚バラ巻きんこ">アスパラの豚バラ巻きんこ</option>
+        　<option value="ラタトゥイユ">ラタトゥイユ</option>
+       　 <option value="玉ねぎ焼き">玉ねぎ焼き</option>
+        　<option value="牛皿">牛皿</option>
+        　<option value="茄子のお浸し">茄子のお浸し</option>
+        　<option value="肉豆腐">肉豆腐</option>
+    </select>
+    <br><br>
+    <label for="soup1">汁物</label>
+    <br>
+    <select name="soup1" id="soup1">
+        　<option value="おまかせ">おまかせ</option>  
+          <option value="味噌汁">味噌汁</option>
+          <option value="ミネストローネ">ミネストローネ</option>
+          <option value="豚汁">豚汁</option>
+        　<option value="ほうれん草たっぷり豆乳スープ">ほうれん草たっぷり豆乳スープ</option>
+    </select>
+    <br><br><br>
+    <label for="date2">日付②</label>
+    <br>
+    <input type="date" id="date2" name="date2">
+    <br><br>
+    <label for="main2">メイン料理</label>
+    <br>
+    <select name="main2" id="main2">
           <option value="おまかせ">おまかせ</option>  
           <option value="ピーマン肉詰め">ピーマン肉詰め</option>
           <option value="ロールキャベツ">ロールキャベツ</option>
@@ -68,9 +127,9 @@
         　<option value="焼きそば">焼きそば</option>
     </select>
     <br><br>
-    <label for="side">副菜</label>
+    <label for="side2">副菜</label>
     <br>
-    <select name="side" id="side">
+    <select name="side2" id="side2">
         　<option value="おまかせ">おまかせ</option>
           <option value="きんぴらごぼう">きんぴらごぼう</option>
           <option value="たたききゅうり">たたききゅうり</option>
@@ -85,9 +144,67 @@
         　<option value="肉豆腐">肉豆腐</option>
     </select>
     <br><br>
-    <label for="soup">汁物</label>
+    <label for="soup2">汁物</label>
     <br>
-    <select name="soup" id="soup">
+    <select name="soup2" id="soup2">
+        　<option value="おまかせ">おまかせ</option>  
+          <option value="味噌汁">味噌汁</option>
+          <option value="ミネストローネ">ミネストローネ</option>
+          <option value="豚汁">豚汁</option>
+        　<option value="ほうれん草たっぷり豆乳スープ">ほうれん草たっぷり豆乳スープ</option>
+    </select>
+    <br><br><br>
+    <label for="date3">日付③</label>
+    <br>
+    <input type="date" id="date3" name="date3">
+    <br><br>
+    <label for="main3">メイン料理</label>
+    <br>
+    <select name="main3" id="main3">
+          <option value="おまかせ">おまかせ</option>  
+          <option value="ピーマン肉詰め">ピーマン肉詰め</option>
+          <option value="ロールキャベツ">ロールキャベツ</option>
+          <option value="ひじき入り肉じゃが">ひじき入り肉じゃが</option>
+          <option value="ハンバーグ">ハンバーグ</option>
+       　 <option value="麻婆茄子">麻婆茄子</option>
+        　<option value="豚キムチ炒飯">豚キムチ炒飯</option>
+       　 <option value="親子丼">親子丼</option>
+        　<option value="生姜焼き">生姜焼き</option>
+        　<option value="ハヤシライス">ハヤシライス</option>
+        　<option value="カレーライス">カレーライス</option>
+        　<option value="キーマカレー">キーマカレー</option>
+        　<option value="ビーフシチュー">ビーフシチュー</option>
+        　<option value="タコス">タコス</option>
+        　<option value="ファヒータ">ファヒータ</option>
+        　<option value="ガパオライス">ガパオライス</option>
+        　<option value="カオマンガイ">カオマンガイ</option>
+        　<option value="フェジョアーダ">フェジョアーダ</option>
+       　 <option value="春巻き">春巻き</option>
+        　<option value="唐揚げ">唐揚げ</option>
+        　<option value="焼うどん">焼うどん</option>
+        　<option value="焼きそば">焼きそば</option>
+    </select>
+    <br><br>
+    <label for="side3">副菜</label>
+    <br>
+    <select name="side3" id="side3">
+        　<option value="おまかせ">おまかせ</option>
+          <option value="きんぴらごぼう">きんぴらごぼう</option>
+          <option value="たたききゅうり">たたききゅうり</option>
+        　<option value="レタスと韓国のりのサラダ">レタスと韓国のりのサラダ</option>
+        　<option value="かぼちゃの煮物">かぼちゃの煮物</option>
+          <option value="ガーリックシュリンプ">ガーリックシュリンプ</option>
+       　 <option value="アスパラの豚バラ巻きんこ">アスパラの豚バラ巻きんこ</option>
+        　<option value="ラタトゥイユ">ラタトゥイユ</option>
+       　 <option value="玉ねぎ焼き">玉ねぎ焼き</option>
+        　<option value="牛皿">牛皿</option>
+        　<option value="茄子のお浸し">茄子のお浸し</option>
+        　<option value="肉豆腐">肉豆腐</option>
+    </select>
+    <br><br>
+    <label for="soup3">汁物</label>
+    <br>
+    <select name="soup3" id="soup3">
         　<option value="おまかせ">おまかせ</option>  
           <option value="味噌汁">味噌汁</option>
           <option value="ミネストローネ">ミネストローネ</option>

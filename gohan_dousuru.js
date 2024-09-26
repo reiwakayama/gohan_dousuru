@@ -1,12 +1,14 @@
 const tiles = document.querySelectorAll('.tile');
 const selectedItemsInput = document.getElementById('selected_items');
-const mainSelect = document.getElementById('main');
-const sideSelect = document.getElementById('side');
-const soupSelect = document.getElementById('soup');
-const dateInput = document.getElementById('date');
+const mainSelect = document.getElementById('main1');
+const sideSelect = document.getElementById('side1');
+const soupSelect = document.getElementById('soup1');
+const dateInput1 = document.getElementById('date1');
+const dateInput2 = document.getElementById('date2');
+const dateInput3 = document.getElementById('date3');
 
 const options = {
-    main: {
+    main1: {
         "ピーマン": ["ピーマン肉詰め", "ガパオライス", "ファヒータ"],
         "キャベツ": ["ロールキャベツ", "焼うどん", "焼きそば"],
         "玉ねぎ": ["親子丼"],
@@ -14,7 +16,7 @@ const options = {
         "セロリ": ["フェジョアーダ"],
         "レタス": ["タコス"],
     },
-    side: {
+    side1: {
         "ピーマン": [],
         "キャベツ": [],
         "玉ねぎ": ["玉ねぎ焼き", "牛皿", "肉豆腐"],
@@ -22,7 +24,7 @@ const options = {
         "セロリ": [],
         "レタス": ["レタスと韓国のりのサラダ"],
     },
-    soup: {
+    soup1: {
         "ピーマン": [],
         "キャベツ": [],
         "玉ねぎ": [],
@@ -49,7 +51,6 @@ function updateSelectedItems() {
 }
 
 function highlightOptions(selectedValues) {
-    // Highlight only the relevant options
     selectedValues.forEach(value => {
         highlightSelectOptions(mainSelect, options.main[value]);
         highlightSelectOptions(sideSelect, options.side[value]);
@@ -60,17 +61,23 @@ function highlightOptions(selectedValues) {
 function highlightSelectOptions(selectElement, itemsToHighlight) {
     Array.from(selectElement.options).forEach(option => {
         if (itemsToHighlight && itemsToHighlight.includes(option.value)) {
-            option.style.backgroundColor = '#e6ffe6'; // Highlight
+            option.style.backgroundColor = '#e6ffe6'; 
         }
     });
 }
 
-function setDefaultDate() {
-    const today = new Date();
+function formatDate(date) {
     const options = { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit' };
     const formatter = new Intl.DateTimeFormat('en-CA', options);
-    const [year, month, day] = formatter.format(today).split('-');
-    dateInput.value = `${year}-${month}-${day}`;
+    const [year, month, day] = formatter.format(date).split('-');
+    return `${year}-${month}-${day}`;
 }
 
-setDefaultDate();
+function setDefaultDates() {
+    const today = new Date();
+    dateInput1.value = formatDate(today); 
+    dateInput2.value = formatDate(new Date(today.getTime() + 24 * 60 * 60 * 1000)); 
+    dateInput3.value = formatDate(new Date(today.getTime() + 48 * 60 * 60 * 1000)); 
+}
+
+setDefaultDates(); 
