@@ -6,7 +6,7 @@ gohan_dousuru is an automation project to generate meal plan and grocery list fo
 2. Receive meal plan and grocery list via email
 
 ### How to add new recipes
-1. Add new recipes to gohan_dousuru.csv 
+1. Add new recipes to gohan_dousuru.xlsx
 2. Run gohan_dousur.r, an automation to push the changes to google sheets
 3. Run gohan_dousuru.py, an automation to update the html and javascript 
 4. Commit the changes to main branch
