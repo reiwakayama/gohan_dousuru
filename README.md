@@ -8,5 +8,12 @@ gohan_dousuru is created with:
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
+<!--
+### How It Works
+1. Submit the form: https://rei620m.github.io/gohan_dousuru/gohan_dousuru.html
+2.  
+3.
+-->
+
 ### Acknowledgements
 https://github.com/levinunnink/html-form-to-google-sheet
