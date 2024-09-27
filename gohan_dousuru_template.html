@@ -8,10 +8,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍋</text></svg>">
 </head>
 <body>
-<form action="/example.html" method="POST">
-    <label for="date">日付</label>
-    <input type="date" id="date" name="date">
-    <br><br>
+<form method="POST" action="https://script.google.com/macros/s/AKfycbxDlxRGjk6iyrZlcHEzV-WfJH8MylQWPCr25-gOQ_YTf5wVePqzIL0GUCvPQazgZFWG/exec">
     <label for="ingredient">食材から献立を選ぶ</label>
     <div class="tile-container">
         <div class="tile" data-value="ピーマン">
@@ -41,22 +38,88 @@
     </div>
     <input type="hidden" name="selected_items" id="selected_items">
 　　<br><br>
-    <label for="main">メイン料理</label>
+    <label for="date1">日付①</label>
     <br>
-    <select name="main" id="main">
-          <option value="おまかせ">おまかせ</option>  
+    <input type="date" id="date1" name="date1">
+    <br><br>
+    <label for="main1">メイン料理</label>
+    <br>
+    <select name="main1" id="main1">
+        <option value="おまかせ">おまかせ</option> 
+        <!-- MAIN_OPTIONS_PLACEHOLDER -->
+        <option value="その他">その他</option> 
     </select>
     <br><br>
-    <label for="side">副菜</label>
+    <label for="side1">副菜</label>
     <br>
-    <select name="side" id="side">
-        　<option value="おまかせ">おまかせ</option>
+    <select name="side1" id="side1">
+        <option value="おまかせ">おまかせ</option>
+        <!-- SIDE_OPTIONS_PLACEHOLDER -->
+        <option value="その他">その他</option> 
     </select>
     <br><br>
-    <label for="soup">汁物</label>
+    <label for="soup1">汁物</label>
     <br>
-    <select name="soup" id="soup">
+    <select name="soup1" id="soup1">
         　<option value="おまかせ">おまかせ</option>  
+          <!-- SOUP_OPTIONS_PLACEHOLDER -->
+          <option value="その他">その他</option> 
+    </select>
+    <br><br><br>
+    <label for="date2">日付②</label>
+    <br>
+    <input type="date" id="date2" name="date2">
+    <br><br>
+    <label for="main2">メイン料理</label>
+    <br>
+    <select name="main2" id="main2">
+          <option value="おまかせ">おまかせ</option>  
+          <!-- MAIN_OPTIONS_PLACEHOLDER -->
+          <option value="その他">その他</option> 
+    </select>
+    <br><br>
+    <label for="side2">副菜</label>
+    <br>
+    <select name="side2" id="side2">
+        　<option value="おまかせ">おまかせ</option>
+          <!-- SIDE_OPTIONS_PLACEHOLDER -->
+          <option value="その他">その他</option> 
+    </select>
+    <br><br>
+    <label for="soup2">汁物</label>
+    <br>
+    <select name="soup2" id="soup2">
+        　<option value="おまかせ">おまかせ</option>  
+          <!-- SOUP_OPTIONS_PLACEHOLDER -->
+          <option value="その他">その他</option> 
+    </select>
+    <br><br><br>
+    <label for="date3">日付③</label>
+    <br>
+    <input type="date" id="date3" name="date3">
+    <br><br>
+    <label for="main3">メイン料理</label>
+    <br>
+    <select name="main3" id="main3">
+          <option value="おまかせ">おまかせ</option>  
+          <!-- MAIN_OPTIONS_PLACEHOLDER -->
+          <option value="その他">その他</option> 
+    </select>
+    <br><br>
+    <label for="side3">副菜</label>
+    <br>
+    <select name="side3" id="side3">
+        　<option value="おまかせ">おまかせ</option>
+          <!-- SIDE_OPTIONS_PLACEHOLDER -->
+          <option value="その他">その他</option> 
+    </select>
+    <br><br>
+    <label for="soup3">汁物</label>
+    <br>
+    <select name="soup3" id="soup3">
+        <option value="おまかせ">おまかせ</option>  
+        <!-- SOUP_OPTIONS_PLACEHOLDER -->
+        <option value="その他">その他</option>  
     </select>
     <br><br>
     <button type="submit" class="submit-button">送信</button>
