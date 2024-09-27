@@ -82,18 +82,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setDefaultDates();
-
-    function toggleOtherInput(selectElement) {
-        const inputBaseId = selectElement.name.replace(/\d+$/, ''); 
-        const otherInputId = `other-input-${inputBaseId}${selectElement.name.match(/\d+/)[0]}`; 
-    
-        const otherInput = document.getElementById(otherInputId);
-        if (selectElement.value === 'その他') {
-            otherInput.style.display = 'block'; 
-            otherInput.setAttribute('required', 'required'); 
-        } else {
-            otherInput.style.display = 'none'; /
-            otherInput.removeAttribute('required'); 
-        }
-    }
 });
