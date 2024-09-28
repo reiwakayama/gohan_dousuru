@@ -33,6 +33,7 @@ button {
     cursor: pointer;
     width: 100px;
     transition: border-color 0.3s;
+    cursor: url('image/cursor2.png'), auto;
 }
 
 .tile.selected {
@@ -54,6 +55,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    cursor: url('image/cursor2.png'), auto;
 }
 
 .highlight {
