@@ -1,59 +1,75 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor_1.png'), auto; 
-        }     
-        a {
-            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor_2.png'), auto; 
-        }
-        select, 
-        input[type="text"], 
-        button {
-            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor_2.png'), auto; 
-        }
-        .tile-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .tile {
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-            width: 100px;
-            transition: border-color 0.3s;
-        }
-        .tile.selected {
-            border-color: #007BFF;
-            background-color: #e7f3ff;
-        }
-        .tile img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 5px;
-        }
-        .submit-button {
-            margin-top: 20px;
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .highlight {
-            background-color: #e6ffe6;
-            font-weight: 600;
-        }
-        select {
-            width: 300px; 
-            max-width: 100%; 
-        }
-        .tw-hidden {
-            display: none;
-            height: 0; 
-            visibility: hidden; 
-            overflow: hidden; 
-          }
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    cursor: url('image/cursor1.png'), auto; 
+}
+
+a {
+    cursor: url('image/cursor2.png'), auto; 
+}
+
+select {
+    cursor: url('image/cursor2.png'), auto; 
+    width: 300px; 
+    max-width: 100%; 
+}
+
+input[type="text"], 
+button {
+    cursor: url('image/cursor2.png'), auto; 
+}
+
+input[type="date"], 
+button {
+    cursor: url('image/cursor2.png'), auto; 
+}
+
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tile {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    transition: border-color 0.3s;
+    cursor: url('image/cursor2.png'), auto;
+}
+
+.tile.selected {
+    border-color: #007BFF;
+    background-color: #e7f3ff;
+}
+
+.tile img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    cursor: url('image/cursor2.png'), auto;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: url('image/cursor2.png'), auto;
+}
+
+.highlight {
+    background-color: #e6ffe6;
+    font-weight: 600;
+}
+
+.tw-hidden {
+    display: none;
+    height: 0; 
+    visibility: hidden; 
+    overflow: hidden; 
+}
