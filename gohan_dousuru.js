@@ -83,20 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setDefaultDates();
 
-    const selectElement = document.getElementById('dropdown');
-    const otherInput = document.getElementById('other-input');
+    const selectElements = document.querySelectorAll('.dropdown');
     
-    function updateInputVisibility() {
-        if (selectElement.value === 'その他') {
-            otherInput.classList.remove('tw-hidden');
-            otherInput.required = true;
-        } else {
-            otherInput.classList.add('tw-hidden');
-            otherInput.required = false;
-            otherInput.value = '';
-        }
-    }
+    selectElements.forEach(selectElement => {
+        selectElement.addEventListener('change', function() {
+            const otherInput = this.nextElementSibling;
     
-    updateInputVisibility();
-    selectElement.addEventListener('change', updateInputVisibility);
+            if (this.value === 'その他') {
+                otherInput.classList.remove('tw-hidden');
+                otherInput.required = true;
+            } else {
+                otherInput.classList.add('tw-hidden');
+                otherInput.required = false;
+                otherInput.value = '';
+            }
+        });
+    });
 });
