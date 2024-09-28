@@ -83,17 +83,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setDefaultDates();
 
-    const selectElement = document.getElementById('options');
-    const otherInput = document.getElementById('other_input');
-
-    selectElement.addEventListener('change', function() {
-        if (this.value === 'その他') {
-            otherInput.style.display = 'block'; 
-            otherInput.required = true; 
-        } else {
-            otherInput.style.display = 'none'; 
-            otherInput.required = false; 
-            otherInput.value = ''; 
-    }
-});
+    const selectElements = document.querySelectorAll('.dropwdown');
+    const otherInputs = document.querySelectorAll('.other-input');
+    
+    selectElements.forEach((selectElement, index) => {
+        selectElement.addEventListener('change', function() {
+            if (this.value === 'その他') {
+                otherInputs[index].style.display = 'block'; 
+                otherInputs[index].required = true; 
+            } else {
+                otherInputs[index].style.display = 'none'; 
+                otherInputs[index].required = false;
+                otherInputs[index].value = ''; 
+            }
+        });
+    });
 });
