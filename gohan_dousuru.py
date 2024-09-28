@@ -30,7 +30,6 @@ def get_menus(ingredient):
     menus = df[df['ingredient'].str.contains(ingredient, case=False, na=False)]['menu'].tolist()
     return ', '.join(f'"{menu}"' for menu in menus)
 
-# Get the menus for each ingredient
 piman_menus = get_menus('ピーマン')
 cabbage_menus = get_menus('キャベツ')
 onion_menus = get_menus('玉ねぎ')
