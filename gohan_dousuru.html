@@ -44,7 +44,7 @@
     <br><br>
     <label for="main1">メイン料理</label>
     <br>
-    <select name="main1" id="main1" class="dropdown">
+    <select name="main1" id="main1">
         <option value="おまかせ">おまかせ</option> 
           <option value="カオマンガイ">カオマンガイ</option>
   <option value="ガパオライス">ガパオライス</option>
@@ -73,11 +73,28 @@
         <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_main1" class="other-input tw-hidden" name="other_main1" placeholder="その他のメイン料理" required>
+    <input type="text" id="other_main1" class="other-input tw-hidden" name="other_main1" placeholder="その他のメイン料理">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('main1'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_main 1'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br>
     <label for="side1">副菜</label>
     <br>
-    <select name="side1" id="side1" class="dropdown">
+    <select name="side1" id="side1">
         <option value="おまかせ">おまかせ</option>
           <option value="アスパラの豚バラ巻きんこ">アスパラの豚バラ巻きんこ</option>
   <option value="ガーリックシュリンプ">ガーリックシュリンプ</option>
@@ -118,7 +135,7 @@
     <br><br>
     <label for="soup1">汁物</label>
     <br>
-    <select name="soup1" id="soup1" class="dropdown">
+    <select name="soup1" id="soup1">
         　<option value="おまかせ">おまかせ</option>  
             <option value="ほうれん草たっぷり豆乳スープ">ほうれん草たっぷり豆乳スープ</option>
   <option value="ポトフ">ポトフ</option>
@@ -128,7 +145,24 @@
           <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_soup1" class="other-input tw-hidden" name="other_soup1" placeholder="その他の汁物" required>
+    <input type="text" id="other_soup1" class="other-input tw-hidden" name="other_soup1" placeholder="その他の汁物">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('soup1'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_soup1'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br><br>
     <label for="date2">日付②</label>
     <br>
@@ -136,7 +170,7 @@
     <br><br>
     <label for="main2">メイン料理</label>
     <br>
-    <select name="main2" id="main2" class="dropdown">
+    <select name="main2" id="main2">
           <option value="おまかせ">おまかせ</option>  
             <option value="カオマンガイ">カオマンガイ</option>
   <option value="ガパオライス">ガパオライス</option>
@@ -165,11 +199,28 @@
           <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_main2" class="other-input tw-hidden" name="other_main2" placeholder="その他のメイン料理" required>
+    <input type="text" id="other_main2" class="other-input tw-hidden" name="other_main2" placeholder="その他のメイン料理">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('main2'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_main2'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br>
     <label for="side2">副菜</label>
     <br>
-    <select name="side2" id="side2" class="dropdown">
+    <select name="side2" id="side2">
         　<option value="おまかせ">おまかせ</option>
             <option value="アスパラの豚バラ巻きんこ">アスパラの豚バラ巻きんこ</option>
   <option value="ガーリックシュリンプ">ガーリックシュリンプ</option>
@@ -189,9 +240,26 @@
           <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_side2" class="other-input tw-hidden" name="other_side2" placeholder="その他のメイン副菜" required>
+    <input type="text" id="other_side2" class="other-input tw-hidden" name="other_side2" placeholder="その他のメイン副菜">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('side2'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_side2'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br>
-    <label for="soup2">汁物</label class="dropdown">
+    <label for="soup2">汁物</label>
     <br>
     <select name="soup2" id="soup2">
         　<option value="おまかせ">おまかせ</option>  
@@ -203,7 +271,24 @@
           <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_soup2" class="other-input tw-hidden" name="other_soup2" placeholder="その他の汁物" required>
+    <input type="text" id="other_soup2" class="other-input tw-hidden" name="other_soup2" placeholder="その他の汁物">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('soup2'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_soup2'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br><br>
     <label for="date3">日付③</label>
     <br>
@@ -211,7 +296,7 @@
     <br><br>
     <label for="main3">メイン料理</label>
     <br>
-    <select name="main3" id="main3" class="dropdown">
+    <select name="main3" id="main3">
           <option value="おまかせ">おまかせ</option>  
             <option value="カオマンガイ">カオマンガイ</option>
   <option value="ガパオライス">ガパオライス</option>
@@ -240,11 +325,28 @@
           <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_main3" class="other-input tw-hidden" name="other_main3" placeholder="その他のメイン料理" required>
+    <input type="text" id="other_main3" class="other-input tw-hidden" name="other_main3" placeholder="その他のメイン料理">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('main3'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_main3'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br>
     <label for="side3">副菜</label>
     <br>
-    <select name="side3" id="side3" class="dropdown">
+    <select name="side3" id="side3">
         　<option value="おまかせ">おまかせ</option>
             <option value="アスパラの豚バラ巻きんこ">アスパラの豚バラ巻きんこ</option>
   <option value="ガーリックシュリンプ">ガーリックシュリンプ</option>
@@ -264,11 +366,28 @@
           <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_side3" class="other-input tw-hidden" name="other_side3" placeholder="その他の副菜" required>
+    <input type="text" id="other_side3" class="other-input tw-hidden" name="other_side3" placeholder="その他の副菜">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('side3'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_side3'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br>
     <label for="soup3">汁物</label>
     <br>
-    <select name="soup3" id="soup3" class="dropdown">
+    <select name="soup3" id="soup3">
         <option value="おまかせ">おまかせ</option>  
           <option value="ほうれん草たっぷり豆乳スープ">ほうれん草たっぷり豆乳スープ</option>
   <option value="ポトフ">ポトフ</option>
@@ -278,7 +397,24 @@
         <option value="その他">その他</option>  
     </select>
     <br><br>
-    <input type="text" id="other_soup3" class="other-input tw-hidden" name="other_soup3" placeholder="その他の汁物" required>
+    <input type="text" id="other_soup3" class="other-input tw-hidden" name="other_soup3" placeholder="その他の汁物">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('soup3'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_soup3'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br>
     <button type="submit" class="submit-button">送信</button>
 </form>
