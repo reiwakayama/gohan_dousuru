@@ -16,12 +16,12 @@ select {
 
 input[type="text"], 
 button {
-    cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/gudetama-LINK.cur'), auto; 
+    cursor: url('image/cursor2.png'), auto; 
 }
 
 input[type="date"], 
 button {
-    cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/gudetama-LINK.cur'), auto; 
+    cursor: url('image/cursor2.png'), auto; 
 }
 
 .tile-container {
