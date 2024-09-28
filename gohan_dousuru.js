@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 otherInput.classList.remove('tw-hidden');
                 otherInput.required = true;
             } else {
-                otherInput.classList.add('tw-hidden');
                 otherInput.required = false;
                 otherInput.value = '';
             }
