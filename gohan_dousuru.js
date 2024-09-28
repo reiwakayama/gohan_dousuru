@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setDefaultDates();
 
-    const selectElements = document.querySelectorAll('.dropwdown');
+    const selectElements = document.querySelectorAll('.dropdown');
     const otherInputs = document.querySelectorAll('.other-input');
     
     selectElements.forEach((selectElement, index) => {
