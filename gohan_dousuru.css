@@ -1,15 +1,15 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor1.png'), auto; 
+            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor_1.png'), auto; 
         }     
         a {
-            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor2.png'), auto; 
+            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor_2.png'), auto; 
         }
         select, 
         input[type="text"], 
         button {
-            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor2.png'), auto; 
+            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/cursor_2.png'), auto; 
         }
         .tile-container {
             display: flex;
