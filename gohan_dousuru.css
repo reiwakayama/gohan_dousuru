@@ -19,6 +19,11 @@ button {
     cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/gudetama-LINK.cur'), auto; 
 }
 
+input[type="date"], 
+button {
+    cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/gudetama-LINK.cur'), auto; 
+}
+
 .tile-container {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +35,6 @@ button {
     border-radius: 8px;
     padding: 10px;
     text-align: center;
-    cursor: pointer;
     width: 100px;
     transition: border-color 0.3s;
     cursor: url('image/cursor2.png'), auto;
@@ -45,6 +49,7 @@ button {
     width: 50px;
     height: 50px;
     margin-bottom: 5px;
+    cursor: url('image/cursor2.png'), auto;
 }
 
 .submit-button {
@@ -54,7 +59,6 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     cursor: url('image/cursor2.png'), auto;
 }
 
