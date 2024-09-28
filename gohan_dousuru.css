@@ -62,11 +62,6 @@ button {
     cursor: url('image/cursor2.png'), auto;
 }
 
-.highlight {
-    background-color: #ffd3da
-    font-weight: 600;
-}
-
 .tw-hidden {
     display: none;
     height: 0; 
