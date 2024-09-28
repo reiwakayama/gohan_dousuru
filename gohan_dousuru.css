@@ -1,6 +1,16 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/gudetama-NORMAL.cur'), auto; 
+        }
+        
+        a {
+            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/gudetama-LINK.cur'), auto; 
+        }
+        select, 
+        input[type="text"], 
+        button {
+            cursor: url('https://raw.githubusercontent.com/rei620m/gohan_dousuru/main/image/gudetama-LINK.cur'), auto; 
         }
         .tile-container {
             display: flex;
