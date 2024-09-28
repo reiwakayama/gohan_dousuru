@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function highlightSelectOptions(selectElement, itemsToHighlight) {
         Array.from(selectElement.options).forEach(option => {
             if (itemsToHighlight && itemsToHighlight.includes(option.value)) {
-                option.style.backgroundColor = '#ffd3da';
+                option.style.backgroundColor = '#ffe9ec';
             }
         });
     }
