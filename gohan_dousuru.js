@@ -83,19 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setDefaultDates();
 
-    const selectElements = document.querySelectorAll('.dropdown');
-    const otherInputs = document.querySelectorAll('.other-input');
+    const selectElement = document.getElementById('dropdown');
+    const otherInput = document.getElementById('other-input');
     
-    selectElements.forEach((selectElement, index) => {
-        selectElement.addEventListener('change', function() {
-            if (this.value === 'その他') {
-                otherInputs[index].style.display = 'block'; 
-                otherInputs[index].required = true; 
-            } else {
-                otherInputs[index].style.display = 'none'; 
-                otherInputs[index].required = false;
-                otherInputs[index].value = ''; 
-            }
-        });
-    });
+    function updateInputVisibility() {
+        if (selectElement.value === 'その他') {
+            otherInput.classList.remove('tw-hidden');
+            otherInput.required = true;
+        } else {
+            otherInput.classList.add('tw-hidden');
+            otherInput.required = false;
+            otherInput.value = '';
+        }
+    }
+    
+    updateInputVisibility();
+    selectElement.addEventListener('change', updateInputVisibility);
 });
