@@ -41,8 +41,8 @@ button {
 }
 
 .tile.selected {
-    border-color: #007BFF;
-    background-color: #e7f3ff;
+    border-color: #ffdbe0;
+    background-color: #ffe9ec;
 }
 
 .tile img {
@@ -55,7 +55,7 @@ button {
 .submit-button {
     margin-top: 20px;
     padding: 10px 15px;
-    background-color: #007BFF;
+    background-color: #ffbdc7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -63,7 +63,7 @@ button {
 }
 
 .highlight {
-    background-color: #e6ffe6;
+    background-color: #ffd3da
     font-weight: 600;
 }
 
