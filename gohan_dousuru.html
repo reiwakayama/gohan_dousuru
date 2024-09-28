@@ -97,7 +97,24 @@
         <option value="その他">その他</option> 
     </select>
     <br><br>
-    <input type="text" id="other_side1" class="other-input tw-hidden" name="other_side1" placeholder="その他の副菜" required>
+    <input type="text" id="other_side1" class="other-input tw-hidden" name="other_side1" placeholder="その他の副菜">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectElement = document.getElementById('side1'); 
+
+            selectElement.addEventListener('change', function() {
+                const otherInput = document.getElementById('other_side1'); 
+
+                if (this.value === 'その他') {
+                    otherInput.classList.remove('tw-hidden');
+                    otherInput.required = true; 
+                } else {
+                    otherInput.required = false; 
+                    otherInput.value = ''; 
+                }
+            });
+        });
+    </script>
     <br><br>
     <label for="soup1">汁物</label>
     <br>
