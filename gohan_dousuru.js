@@ -67,21 +67,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function formatDate(date) {
-        const options = { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit' };
-        const formatter = new Intl.DateTimeFormat('en-CA', options);
-        const [year, month, day] = formatter.format(date).split('-');
-        return `${year}-${month}-${day}`;
-    }
+function formatDate(date) {
+    const options = { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit' };
+    const formatter = new Intl.DateTimeFormat('en-CA', options);
+    const parts = formatter.format(date).split('/');
+    return `${parts[0]}-${parts[1]}-${parts[2]}`; // Return in YYYY-MM-DD format
+}
 
     function setDefaultDates() {
         const today = new Date();
-        dateInput1.value = formatDate(today);
-        dateInput2.value = formatDate(new Date(today.getTime() + 24 * 60 * 60 * 1000));
-        dateInput3.value = formatDate(new Date(today.getTime() + 48 * 60 * 60 * 1000));
+        document.getElementById('date1').value = formatDate(today);
+        document.getElementById('date2').value = formatDate(new Date(today.getTime() + 24 * 60 * 60 * 1000)); 
+        document.getElementById('date3').value = formatDate(new Date(today.getTime() + 48 * 60 * 60 * 1000)); 
     }
-
+    
     setDefaultDates();
+    
+    const today = new Date();
+    const nextWeek = new Date();
+    nextWeek.setDate(today.getDate() + 7);
+    
+    // Set min and max attributes for each date input
+    const dateInputs = ['date1', 'date2', 'date3'];
+    
+    dateInputs.forEach(id => {
+        document.getElementById(id).min = formatDate(today);
+        document.getElementById(id).max = formatDate(nextWeek);
+    });
 
     const selectElements = document.querySelectorAll('.dropdown');
     
