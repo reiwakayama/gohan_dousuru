@@ -9,7 +9,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍋</text></svg>">
 </head>
 <body>
-<form method="POST" action="https://script.google.com/macros/s/AKfycbxDlxRGjk6iyrZlcHEzV-WfJH8MylQWPCr25-gOQ_YTf5wVePqzIL0GUCvPQazgZFWG/exec">
+<form id="gohan_dousuru" method="POST" action="https://script.google.com/macros/s/AKfycbxDlxRGjk6iyrZlcHEzV-WfJH8MylQWPCr25-gOQ_YTf5wVePqzIL0GUCvPQazgZFWG/exec">
     <label for="ingredient">食材から献立を選ぶ</label>
     <div class="tile-container">
         <div class="tile" data-value="ピーマン">
@@ -411,5 +411,29 @@
     <button type="submit" class="submit-button">送信</button>
 </form>
 <script src="gohan_dousuru.js"></script>
+<script>
+    document.getElementById("gohan_dousuru").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        
+        const formData = new FormData(this);
+        
+        fetch(this.action, {
+            method: this.method,
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === "success") {
+                window.location.href = "https://rei620m.github.io/gohan_dousuru/gohan_dousuru_success.html";
+            } else {
+                window.location.href = "https://rei620m.github.io/gohan_dousuru/gohan_dousuru_error.html";
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("送信に失敗しました。");
+        });
+    });
+</script>
 </body>
 </html>
