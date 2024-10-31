@@ -2,6 +2,7 @@ body {
     font-family: 'Hachi Maru Ppo', cursive;
     margin: 20px;
     cursor: url('image/cursor1.png'), auto; 
+    background-color: #d5eaf6;
 }
 
 a {
