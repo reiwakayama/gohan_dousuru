@@ -285,7 +285,50 @@
     </script>
     <br><br>
     <button type="submit" class="submit-button">送信</button>
+    <script
+        src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=6Lc3f24qAAAAAEjlxS9uQ_7-LcofVac7MyJZqdQh"></script>
+    
+    <script type="text/javascript">
+        async function getGoogleRecaptchaToken() {
+            var token = await grecaptcha.execute('6Lc3f24qAAAAAEjlxS9uQ_7-LcofVac7MyJZqdQh', { action: 'submit' })
+            $('.submit').removeAttr('disabled')
+            $('input[name="grecaptcha"]').val(token)
+        }
+        var onloadCallback = function () {
+            getGoogleRecaptchaToken()
+            setInterval(function () {
+                $('.submit').prop('disabled', true)
+                getGoogleRecaptchaToken()
+            }, 80000)
+        };
+    </script>
 </form>
+</div>
+    
 <script src="gohan_dousuru.js"></script>
+<script>
+    document.getElementById("gohan_dousuru").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        
+        const formData = new FormData(this);
+        
+        fetch(this.action, {
+            method: this.method,
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.result === "success") {
+                window.location.href = "https://rei620m.github.io/gohan_dousuru/gohan_dousuru_success.html";
+            } else {
+                window.location.href = "https://rei620m.github.io/gohan_dousuru/gohan_dousuru_error.html";
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("送信に失敗しました。");
+        });
+    });
+</script>
 </body>
 </html>
