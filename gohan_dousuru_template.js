@@ -79,6 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
         dateInput1.value = formatDate(today);
         dateInput2.value = formatDate(new Date(today.getTime() + 24 * 60 * 60 * 1000));
         dateInput3.value = formatDate(new Date(today.getTime() + 48 * 60 * 60 * 1000));
+
+        dateInput1.setAttribute('min', formatDate(today));
+        dateInput2.setAttribute('min', formatDate(today));
+        dateInput3.setAttribute('min', formatDate(today));
+
+        const maxDate = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+        dateInput1.setAttribute('max', formatDate(maxDate));
+        dateInput2.setAttribute('max', formatDate(maxDate));
+        dateInput3.setAttribute('max', formatDate(maxDate));
     }
 
     setDefaultDates();
