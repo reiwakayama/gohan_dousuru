@@ -5,7 +5,7 @@ gohan_dousuru is an automation project to generate meal plan and grocery list fo
 work in progress
 
 ### How to use
-1. Submit the form: https://pink157cm.github.io/gohan_dousuru/gohan_dousuru.html
+1. Submit the form: https://datachai-rei.github.io/gohan_dousuru/gohan_dousuru.html
 2. Receive meal plan and grocery list via email
 
 ### How to add new recipes
